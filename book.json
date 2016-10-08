@@ -1,3 +1,28 @@
 {
-
+"tittle":"Clement learning notes"
+"author":"Clement (Zijian Xu)"
+"description" : "记录读研期间的一些学习笔记。"
+"language": "zh-hans",
+"plugins": [
+    "disqus",
+    "github",
+    "prism",
+    "baidu",
+    "splitter",
+    "-search",
+    "search-pro"
+    "katex"
+    "toggle-chapters"
+    ],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "webpack-handbook"
+    },
+    "github": {
+      "url": "https://github.com/zhaoda/webpack-handbook"
+    },
+    "baidu": {
+        "token": "a9787f0ab45d5e237bab522431d0a7ec"
+    },
+  }
 }
