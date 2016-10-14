@@ -10,9 +10,9 @@
     "baidu",
     "splitter",
     "-search",
-    "search-pro"
-    "katex"
-    "toggle-chapters"
+    "search-pro",
+    "katex",
+    "toggle-chapters",
     ],
   "pluginsConfig": {
     "disqus": {
