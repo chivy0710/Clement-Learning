@@ -1,7 +1,7 @@
 {
-"tittle":"Clement learning notes"
-"author":"Clement (Zijian Xu)"
-"description" : "记录读研期间的一些学习笔记。"
+"tittle":"Clement learning notes",
+"author":"Clement (Zijian Xu)",
+"description" : "记录读研期间的一些学习笔记。",
 "language": "zh-hans",
 "plugins": [
     "disqus",
@@ -9,10 +9,9 @@
     "prism",
     "baidu",
     "splitter",
-    "-search",
-    "search-pro",
+    "search",
     "katex",
-    "toggle-chapters",
+    "toggle-chapters"
     ],
   "pluginsConfig": {
     "disqus": {
