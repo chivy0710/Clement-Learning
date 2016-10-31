@@ -71,13 +71,19 @@ _****_注意：_****_所有的时间间隔都是通过其他间隔，归一化�
 第二级别的特征提取 (基于形态学的特征) 是用峰值幅值来计算的。
 用$$ a_p (i), a_q (i), a_r (i), a_s (i), a_t (i) $$，幅值特征$$a_{qt}$$和$$a_{rr}$$计算方法如下：
 
-$$ a_{qt} = \frac1n \sum_{i=1}^na_t (i) - a_q (i) \qquad (2) $$
+$$
+a_{qt} = \frac1n \sum_{i=1}^na_t (i) - a_q (i) \qquad (2)
+$$
 
-$$ a_{rr}=\frac1n\sum_{i=1}^na_r (i) - a_r (i-1) \qquad (3) $$
+$$
+a_{rr}=\frac1n\sum_{i=1}^na_r (i) - a_r (i-1) \qquad (3) 
+$$
 
 特征集还包括幅值特征比率和幅值特征交互，定义如下：
 
-$$ a_{qt / rr}=\frac1n \sum_{i=1}^n \frac{a_t (i)-a_q (i)}{a_r (i)-a_r (i-1)}\qquad (4) $$
+$$
+a_{qt / rr}=\frac1n \sum_{i=1}^n \frac{a_t (i)-a_q (i)}{a_r (i)-a_r (i-1)}\qquad (4)
+$$
 
 $$
 a_{qt*rr}=\frac1n\sum_{i=1}^n{(a_t (i)-a_q (i))}*{(a_r (i)-a_r (i-1))}\qquad (5)
@@ -92,13 +98,20 @@ $$
 
 R峰作为最明显的特征量，RR间隔能提供很多信息，定义如下式子：
 
-$$ z= (z_1,z_2,\cdots,z_n) = (r_1-r_0,r_2-r_1, \cdots, r_n-r_{n-1}) = D (r) $$
+$$
+z= (z_1,z_2,\cdots,z_n) = (r_1-r_0,r_2-r_1, \cdots, r_n-r_{n-1}) = D (r)
+$$
 
 其中，D是差异算子并且$$r= (r_0, r_1, \cdots, r_n).$$
 对于固定的$$ \varepsilon > 0, $$ 让x定义为唯一的方程：
 
-$$ ||z-x||_\infty = max_i \{|z_i-x_i| \} \leq \varepsilon \qquad $$和
-$$ \qquad ||D(x)||_2 = \sqrt{\sum_{i=1}^{n-1}(x_{i+1}-x_i)^2} $$
+$$
+||z-x||_\infty = max_i \{|z_i-x_i| \} \leq \varepsilon \qquad 
+$$
+和
+$$
+\qquad ||D(x)||_2 = \sqrt{\sum_{i=1}^{n-1}(x_{i+1}-x_i)^2}
+$$
 
 定义一阶二元范数:
 
@@ -135,21 +148,29 @@ x比z更平滑而且是一个分段的线性方程。令y=z-x，则z=x+y就可�
 
 传统的特征用来与这篇文章描述的新的特征集比较和对照有效性，用在评估血液动力状态。从时间域提取的特征有RR间隔方差平方根(SDNN)又称为NN间隔，定义为：
 
-$$ SDNN=\sqrt{\frac1{n-1} \sum_{j=1}^n {(z_j-\overline{z}})^2} \qquad (7) $$
+$$
+SDNN=\sqrt{\frac1{n-1} \sum_{j=1}^n {(z_j-\overline{z}})^2} \qquad (7)
+$$
 
 $$z\_i$$是$$i^{th}$$RR间隔，$$\overline{z}$$是RR间隔在一个窗口中的平均值。SDNN反应的是在一个记录周期的变化性所有的循环变量。
 RR间隔的一阶微分的标准偏差\(SDSD\)，计算如下：
 
-$$ SDSD=\sqrt{\frac1{n-1}\sum_{j=1}^{n-1} (|u_i|- \mu)^2}\qquad(8) $$
+$$
+SDSD=\sqrt{\frac1{n-1}\sum_{j=1}^{n-1} (|u_i|- \mu)^2}\qquad(8)
+$$
 
 其中，$$ (u_1,u_2,\cdots,u_{n-1}) =D (z)= (z_2-z_1, z_3-z_2, \cdots, z_n-z_{n-1}),\mu $$是u的平均值。SDSD在数量上表示了HRV短期的变化性。
 另一个类似于SDSD的测量值是连续偏差均方根(RMSSD),计算如下：
 
-$$ RMSSD=\sqrt{\frac1{n-1}\sum_{j=1}^{n-1}u_i^2}\qquad (9) $$
+$$
+RMSSD=\sqrt{\frac1{n-1}\sum_{j=1}^{n-1}u_i^2}\qquad (9)
+$$
 
 另一个提取的特征是pNN50，代表R-R间期与平均R-R间期大于50ms的个数占总数的百分比，定义如下：
 
-$$ pNN50=\frac{100}{n-1}NN50,NN50= {i|1\leq i\leq n-1\ and\ |u_i|>50ms}. $$
+$$
+pNN50=\frac{100}{n-1}NN50,NN50= {i|1\leq i\leq n-1\ and\ |u_i|>50ms}. 
+$$
 
 另一些从HRV提取的特征有功率谱密度\(PSD\),使用基于周期图的FFT方法，类似于用流行的**Kubios HRV分析工具**。使用计算过的PSD，低频带\(LF,0.004-0.15Hz\)功率和高频带\(HF,0.15-0.4Hz\)功率被提取出来。HF/LF功率比同样能够计算出来作为一个增加的特征。其他提取的特征有均值、峰态以及每个HRV窗口的偏度。
 
@@ -228,3 +249,7 @@ $$ pNN50=\frac{100}{n-1}NN50,NN50= {i|1\leq i\leq n-1\ and\ |u_i|>50ms}. $$
 作者提出局限性情况下下体负压测试与真实病人数据的一些关联。
 关于physiobank数据的情况，是怎样的一种数据。
 
+# 论文的优点
+
+符合一般论文的写作模式，可以作为写作论文的参考。
+除了一般采集的数据进行研究，本文作者采用了下体负压试验来获取数据，比较新颖。
