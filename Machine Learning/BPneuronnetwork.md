@@ -17,7 +17,9 @@ BP 神经网络中的 BP 为 Back  Propagation 的简写，最早它是由Rumelh
 
 神经元的积累的刺激是由其他神经元传递过来的刺激量和对应的权重之和。用$$X_j$$表示这种积累，$$Y_i$$表示某个神经元传递过来的刺激量，$$W_i$$ 表示链接某个神经元刺激的权重，得到公式：
 
-$$ x_j = (y_1*W_1)+(y_2*W_2)+\cdots+(y_i*W_i)+\cdots+(y_n*W_n) = \sum_{i=1}^n(y_i*W_i) $$
+$$
+x_j = (y_1*W_1)+(y_2*W_2)+\cdots+(y_i*W_i)+\cdots+(y_n*W_n) = \sum_{i=1}^n(y_i*W_i)
+$$
 
 而当 $$X_j$$ 完成积累后，完成积累的神经元本身对周围的一些神经元传播刺激，将其表示为$$y_j$$,得到：$$y_j = f(X_j)$$神经元根据积累后$$X_j$$的结果进行处理后，对外传递刺激$$y_j$$。用f函数映射来表示这种处理，将它称之为激活函数。
 
@@ -36,38 +38,54 @@ $$ x_j = (y_1*W_1)+(y_2*W_2)+\cdots+(y_i*W_i)+\cdots+(y_n*W_n) = \sum_{i=1}^n(y_
 
 从数学上对BP神经网络模型进行分析，本文第一部分神经网的生物模型中可以得到关于BP神经网络的第一个公式(1)：
 
-$$ x_j = \sum_iy_iw_{ji}\qquad(1) $$
+$$
+x_j = \sum_iy_iw_{ji}\qquad (1)
+$$
 
 对于神经元本身的输出的激活函数，一般来说选取 Sigmoid 函数，那么可以得到第二个公式（2）：
 
-$$ y_j = \frac1{1+e^{-x_i}}\qquad(2) $$
+$$
+y_j = \frac1{1+e^{-x_i}}\qquad (2)
+$$
 
 通过以上两个公式，可以分析出来BP神经网络中输出结果的计算过程。每个神经元收到刺激$$y_i$$然后加权积累（权重$$W_{ji}$$）完成后产生$$x_j$$，再通过激活函数产生刺激$$y_j$$，向下一层与它相连的神经元传递，依次类推最终输出结果。
 我们再来分析如何利用向后反馈机制来修正神经元权重$$W_{ji}$$，这一部分数学推导需要运用到多元微分的数学内容。要修正$$W_{ji}$$ 就需要得到误差量。具体来看，首先用$$d_j$$ 来表示真实的正确结果，并且设误差为E，那么$$(y_j-d_j)$$对应的就是E对于$$y_j$$的微分增量，即$$y_j$$减去$$(y_j - d_j)$$后就能得到正确值，得到公式（3）：
 
-$$ \frac{\partial E}{\partial y_j} = y_j - d_j\qquad(3) $$
+$$
+\frac{\partial E}{\partial y_j} = y_j - d_j\qquad (3)
+$$
 
 然后，明确目标，需要知道的是对于权重 $$W_{ji}$$ 的误差量是多少，也就是$$\frac{\partial E}{\partial w_{ji}}$$的值。而由公式（1）中知道 $$W_ji$$ 与 $$x_j$$ 相关， 那么可以推导出公式（4）：然后，明确目标，需要知道的是对于权重 $$W_{ji}$$ 的误差量是多少，也就是$$\frac{\partial E}{\partial w_{ji}}$$的值。而由公式（1）中知道 $$W_{ji}$$ 与 $$x_j$$ 相关， 那么可以推导出公式（4）：
 
-$$ \frac{\partial E}{\partial w_{ji}} = \frac{\partial E}{\partial x_j}\frac{\partial x_j}{\partial w_{ji}} = \frac{\partial E}{\partial x_j}y_i\qquad(4) $$
+$$
+\frac{\partial E}{\partial w_{ji}} = \frac{\partial E}{\partial x_j}\frac{\partial x_j}{\partial w_{ji}} = \frac{\partial E}{\partial x_j}y_i\qquad (4)
+$$
 
 需要求得 $$W_{ji} $$的误差量，转换为需要求 $$\frac{\partial E}{\partial x_j}$$的值了。它的推导如下：
 
-$$ \frac{\partial y_j}{\partial x_j} = y_j(1-y_j) $$
+$$
+\frac{\partial y_j}{\partial x_j} = y_j(1-y_j)
+$$
 
 所以最终得到的误差量的值为：
 
-$$ \frac{\partial E_j}{\partial w_{ji}} = y_j(1-y_j)(y_j-d_j)y_i $$
+$$
+\frac{\partial E_j}{\partial w_{ji}} = y_j(1-y_j)(y_j-d_j)y_i
+$$
 
 以上公式需要注意下标：最后一个是 $$y_i$$ ，前面的都是 $$y_j$$ 。推到这里可以算是完成了运用神经网络的输出值 $$y_j$$ 和正确值 $$d_j$$ 对最后一层隐藏层 $$W_{ji}$$的修正，那么对其他隐藏层呢？接着往下看。
 上面的推导过程由公式（3）开始，如果我们知道$$\frac{\partial E_j}{\partial y_i}$$（注意是 $$y_i$$ ，公式（3）中是 $$y_j$$ ），就可以同理推导求出其对应其他隐藏层需要修正的权重值误差量了。推导如下：
 
-$$ \frac{\partial E_j}{\partial y_i} = \frac{\partial E_j}{\partial y_j}\frac{\partial y_j}{\partial x_j}\frac{\partial x_j}{\partial y_i} = (y_j-d_j)y_j(1-y_j)w_{ji} $$
+$$
+\frac{\partial E_j}{\partial y_i} = \frac{\partial E_j}{\partial y_j}\frac{\partial y_j}{\partial x_j}\frac{\partial x_j}{\partial y_i} = (y_j-d_j)y_j(1-y_j)w_{ji}
+$$
 
 这样所有的误差量的都可以同理 推导完成！
 最后一步修正 $$W_{ji}$$ ，就是加上下面变量了，设置一个l（0 到 1 之间）学习率。
 
-$$ \Delta W = -l\frac{\partial E}{\partial w} $$
+$$
+\Delta W = -l\frac{\partial E}{\partial w}
+$$
 
 ## C语言实现
 
@@ -197,9 +215,13 @@ void  trainNetwork(){
 BP神经网络输出
 函数computO\(i\)负责的是通过BP神经网络的机制对样本i的输入，预测其输出。回想BP神经网络的基本模型（详情见基本模型）对应的公式（1）还有激活函数对应的公式（2）：
 
-$$ x_j = \sum_iy_iw_{ji} $$
+$$
+x_j = \sum_iy_iw_{ji}
+$$
 
-$$ y_j = \frac1{1+e^{-x_i}} $$
+$$
+y_j = \frac1{1+e^{-x_i}}
+$$
 
 在前篇设计的BP神经网络中，输入层与隐藏层权重对应的数据结构是w\[Neuron\]\[In\]，隐藏层与输出层权重对应的数据结构是v\[Out\]\[Neuron\]，并且数组 o\[Neuron\] 记录的是神经元通过激活函数对外的输出，BP神经网络预测的样本结果保存在OutputData\[Out\]中。由此，就可以得到以下实现的参考代码：
 
@@ -229,7 +251,9 @@ void computO(int var){
 
 函数backUpdate\(i\)负责的是将预测输出的结果与样本真实的结果进行比对，然后对神经网络中涉及到的权重进行修正，也这是BP神经网络实现的++关键所在++。如何求到对于w\[Neuron\]\[In\]和v\[Out\]\[Neuron\] 进行修正的误差量便是关键所在！误差修正量的求法在基本模型一文中数学分析部分有解答，++具体问题具体分析++，落实到我们设计的这个BP神经网络上来说，需要得到的是对w\[Neuron\]\[In\] 和 v\[Out\]\[Neuron\] 两个数据进行修正误差，误差量用数据结构 dw\[Neuron\]\[In\]  和  dv\[Out\]\[Neuron\]  来进行存储。那么来分析下这两个修正误差量是什么样的？推导的思路与基本模型中推导误差量的一致，这里仅列出对具体对于我们设计的BP神经网络中的数学推导过程：
 
-$$ y_j = \sum_io_iv_{ji} \Rightarrow \frac {\partial y_i}{\partial v_{ji}} = o_i, \frac {\partial y_j}{\partial o_i} = v_{ji}, \frac{\partial E}{\partial y_j} = y_j - d $$
+$$
+y_j = \sum_io_iv_{ji} \Rightarrow \frac {\partial y_i}{\partial v_{ji}} = o_i, \frac {\partial y_j}{\partial o_i} = v_{ji}, \frac{\partial E}{\partial y_j} = y_j - d
+$$
 
 $$
 \therefore \frac{\partial E}{\partial v_{ji}} = \frac{\partial E}{\partial y_j}\frac{\partial y_i}{\partial v_{ji}} = (y_j - d)o_i
