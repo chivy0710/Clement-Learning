@@ -52,7 +52,9 @@ GVM同样为三层网络，基于统计学习的基础，采用的是蒙特卡�
 ![](/Machine Learning/imgs/GVM-1-N-1.png)
 对于输入层每一个输入x，从输入层到隐藏层的计算过程，有如下计算公式：
 
-$$ o_j = f_j(\beta_jh_j), h_j = \sum_{j=1}^M w_j x-b_j , j = 1, \cdots, M \qquad (1) $$
+$$
+o_j = f_j(\beta_jh_j), h_j = \sum_{j=1}^M w_j x-b_j , j = 1, \cdots, M \qquad (1)
+$$
 
 其中，
 ①    M表示隐藏层神经元个数，即隐藏层的维度。
@@ -78,7 +80,9 @@ Tanh函数：$$y =\frac{e^x-e^{-x}}{e^x+e^{-x}}$$ 函数将x投射到-1到1之�
 ⑥    $$\beta_j$$表示的是激活函数系数，控制局域场数据的范围，对于神经网络训练影响较大。
 从隐藏层到输出层的计算过程，有如下计算公式：
 
-$$y=h_j, h_j=\sum_{j=1}^Mv_jo_j,j=1,...,M\qquad(2)$$
+$$
+y=h_j, h_j=\sum_{j=1}^Mv_jo_j,j=1,...,M\qquad(2)
+$$
 
 其中，
 ①  $$v_j$$表示隐藏层到输出层的权值。
