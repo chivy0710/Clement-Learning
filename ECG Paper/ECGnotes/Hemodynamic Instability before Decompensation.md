@@ -62,7 +62,9 @@ ECG信号在特征提取前做归一化处理，通过减去信号中值并且�
 $$ t_p (i), t_q (i), t_r (i), t_s (i) $$ 和 $$ t_t (i) $$ 定义为在第 $$i^{th}$$ 窗格的P,Q,R,S,T峰时间。
 特征$$t_{qt/rr}$$被定义为：
 
-$$ t_{qt / rr} = \frac{1}{n} \sum_{i=1}^n \frac{t_t (i) - t_q (i) }{t_r (i) - t_r (i-1) } \qquad (1) $$
+$$ 
+t_{qt / rr} = \frac{1}{n} \sum_{i=1}^n \frac{t_t (i) - t_q (i) }{t_r (i) - t_r (i-1) } \qquad (1) 
+$$
 
 $$ t_t (i)-t_q (i) $$表示$$i^{th}Q-T$$间隔长度，$$t_r (i) - t_r (i-1) $$表示第i个R-R峰间隔
 _****_注意：_****_所有的时间间隔都是通过其他间隔，归一化来避免HR的影响。
