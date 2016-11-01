@@ -1,6 +1,6 @@
 # GVM神经网络
 
-_Clement Edit, 2016.7.25_
+*Clément édite à 25.7.2016*
 
 
 ## 神经网络
