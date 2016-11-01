@@ -9,4 +9,4 @@
   * [Introduction of ROC and AUC](ECG Paper/ECGnotes/introduction for ROC and AUC.md)
   * [Introduction of MIT-BIH](ECG Paper/ECGnotes/MIT-BIH.md)
 * [Third Chapter](third_chapter.md)
-  * [Introduction of perceptron](Statistical Learning Method/Introduction of perceptron.md)
+  * [Introduction of Perceptron](Statistical Learning Method/Introduction of perceptron.md)
