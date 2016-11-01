@@ -17,7 +17,7 @@ f(x)= sign(w \cdot x + b)
 $$
 称为感知机。其中，w和b为感知机模型参数，$$ w \in R^n$$ 叫做权值(weight)或权值向量(weight vector), $$ b \in R $$叫做偏置(bias)，$$ w \cdot x $$表示w和x的内积。sign是符号函数，即
 $$
-sign(x) = \left\{ \begin{array} {rl}
+sign(x) = \left\{ \begin{array} {cc}
 +1, \qquad x \geq 0 \\
 -1, \qquad x< 0 \\
  \end{array} \right.
