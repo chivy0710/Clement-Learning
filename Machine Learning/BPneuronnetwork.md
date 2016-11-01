@@ -1,6 +1,7 @@
 # BP神经网络
 
-_Clement Edit，2016.5.20_
+*Clément édite à 20.5.2016, vient de "编程 De blog"*
+
 **摘自编程De博客：**[**http:\/\/www.cnblogs.com\/jzhlin\/archive\/2012\/07\/28\/bp.html**](http://www.cnblogs.com/jzhlin/archive/2012/07/28/bp.html)
 
 ## 基本模型
