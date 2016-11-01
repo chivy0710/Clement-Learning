@@ -27,7 +27,7 @@ $$
 w \cdot x + b = 0
 $$
 对应于特征空间R^n^中的一个超平面S，其中w是超平面的法向量，b是超平面的截距。超平面S称为分离超平面(separating hyperplane).
-![perceptron](/imgs/perceptron-model.png)
+![perceptron](./imgs/perceptron-model.png)
 训练数据集(实例的特征向量及类别)：$$ T=\{(x_1,y_1),(x_2,y_2),\cdots, (x_N,y_N)\} $$
 其中$$ x_i \in {\cal X} = R^n, y_i \in {\cal Y} = \{+1,-1\},i=1,2,\cdots,N $$
 
