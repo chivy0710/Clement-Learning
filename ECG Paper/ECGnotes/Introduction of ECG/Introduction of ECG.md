@@ -30,7 +30,7 @@
 
 一个段：ST段。
 
- ![ECGwaveform](imgs\ECGwaveform.png)
+ ![ECGwaveform](ECG Paper/ECGnotes/Introduction of ECG/imgs/ECGwaveform.png)
 
 P波：心房除极波，反映心房除极时的电位、时间和方向的变化。
 
