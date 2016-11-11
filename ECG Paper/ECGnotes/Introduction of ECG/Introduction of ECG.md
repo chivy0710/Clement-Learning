@@ -30,7 +30,7 @@
 
 一个段：ST段。
 
- ![ECGwaveform](ECG Paper/ECGnotes/Introduction of ECG/imgs/ECGwaveform.png)
+ ![ECGwaveform](./imgs/ECGwaveform.png)
 
 P波：心房除极波，反映心房除极时的电位、时间和方向的变化。
 
@@ -58,7 +58,7 @@ QS波：整个QRS波群均向下时。
 
 **书写表示法**：振幅（波形）较大者用大写英文字母表示，较小者用小写英文字母表示。
 
- ![WaveformName](imgs\WaveformName.png)
+ ![WaveformName](./imgs/WaveformName.png)
 
 国产心电图机导联线的连接：黄色(L)接左上肢，红色(R)接右上肢，绿色(F)接左下肢，黑色(RF)接右下肢；白色导线(V)为胸导联线，将导联线的吸杯电极分别与V1、V2、V3、V4、V5、V6的位置相连。
 
@@ -88,13 +88,13 @@ QS波：整个QRS波群均向下时。
 
 ##### 心电图各波段的测量
 
- ![MeasureOfWaveform](imgs\MeasureOfWaveform.png)
+ ![MeasureOfWaveform](./imgs/MeasureOfWaveform.png)
 
 ##### 心电轴(?)
 
 #### 心电图各波段正常值
 
- ![NormalECG](imgs\NormalECG.png)
+ ![NormalECG](./imgs/NormalECG.png)
 
 ##### P波
 
@@ -118,7 +118,7 @@ $$ Ptfv_1 > -0.04mm \cdot s$$
 
 波形与振幅(电压)
 
-* 胸导联：一般规律是$$R_{V1}$$~$$R_{V5}$$逐渐增高，而S波逐渐减小。$$V_1,V_2$$导联多呈rS形，R/S\<1，$$R_{V1}$$不超过1.0mV。$$V_5,V_6$$导联QRS波群可以呈qR, qRs, Rs或R形，R/S \>1, $$R_{V5}$$不超过2.5mV。$$V_3$$或$$V_4$$导联多呈RS形，R/S大致等于1。
+* 胸导联：一般规律是$$ R_{V1} $$~$$ R_{V5} $$逐渐增高，而S波逐渐减小。$$ V_1 , V_2 $$导联多呈rS形，R/S\<1，$$R_{V1}$$不超过1.0mV。$$V_5,V_6$$导联QRS波群可以呈qR, qRs, Rs或R形，R/S \>1, $$R_{V5}$$不超过2.5mV。$$V_3$$或$$V_4$$导联多呈RS形，R/S大致等于1。
 * q肢体导联：标准导联一般主波向上，I导联的R波不超过1.5mV。aVR导联QRS波群主波向下，可呈QS、rS、rSr'或Qr形，aVR导联的R波一般不超过0.5mV。aVL与aVF导联的QRS波群可呈qR、Rs、R形。也可呈rS形，aVL导联的R波不超过1.2mV，aVF导联的R波不超过2.0mV。
 * Q波：除aVR导联外，正常Q波时间一般小于0.04s,振幅小于同导联R波的1/4。
 
@@ -150,7 +150,7 @@ V1、V2不超过0.04s，V5、V6不超过0.05s。
 
 ##### Q-T间期及U波
 
-Q-T间期：其长短与心率快慢有密切关系，心率快时，Q-T间期缩短；心率慢时，Q-T间期延长。心率在60\~100次/分钟时，Q-T间期的范围在0.32~0.44s。为了避免受心率影响，常用校正的Q-T间期，即 $ Q-Tc= \frac{Q-T}{\sqrt{R-R}} $ 。Q-Tc就是R-R间期为1s(心率60次/分)时的Q-T间期，正常Q-Tc不超过0.44s，一般女性的Q-Tc间期较男性略长。
+Q-T间期：其长短与心率快慢有密切关系，心率快时，Q-T间期缩短；心率慢时，Q-T间期延长。心率在60\~100次/分钟时，Q-T间期的范围在0.32~0.44s。为了避免受心率影响，常用校正的Q-T间期，即 $$ Q-Tc= \frac{Q-T}{\sqrt{R-R}} $$ 。Q-Tc就是R-R间期为1s(心率60次/分)时的Q-T间期，正常Q-Tc不超过0.44s，一般女性的Q-Tc间期较男性略长。
 
 U波：是T波之后0.02~0.04s出现的振幅很低小的波，方向与T波相同。以V3~V4导联较明显。U波过高者见于低血钾病人。
 
@@ -211,7 +211,7 @@ ST-T改变：右胸导联$$(V_1,V2)$$ST段压低，T波倒置，称右心室肥�
 
 ##### 心肌梗死的基本图形
 
- ![myocardium](imgs\myocardium.png)
+ ![myocardium](./imgs/myocardium.png)
 
 缺血型改变：T波高耸直立；心肌缺血发生在心外膜时，表现为T波倒置。
 
@@ -229,11 +229,11 @@ ST-T改变：右胸导联$$(V_1,V2)$$ST段压低，T波倒置，称右心室肥�
 
 陈旧期：心肌梗死后3~6个月，ST-T波不再变化，只存留坏死性Q波。
 
- ![MI](imgs\MI.png)
+ ![MI](./imgs/MI.png)
 
 ##### 心肌梗死定位诊断
 
- ![MIconnect](imgs\MIconnect.png)
+ ![MIconnect](./imgs/MIconnect.png)
 
 ### 心率失常
 
@@ -249,7 +249,7 @@ PP间期：PP间期的互差<0.12s
 
 频率：60-100次/分
 
- ![SinusRhythm](imgs\SinusRhythm.png)
+ ![SinusRhythm](./imgs/SinusRhythm.png)
 
 ##### 窦性心动过缓(sinus bradycardia)
 
@@ -263,7 +263,7 @@ PR间期：0.12-0.20s
 
 特征：窦性P波频率<60次/分。常伴有窦性心律不齐 
 
-![SinusBradycardia](imgs\SinusBradycardia.png)
+![SinusBradycardia](./imgs/SinusBradycardia.png)
 
 ##### 窦性心律不齐
 
@@ -285,13 +285,13 @@ P-P间期差异： >0.12s
 
 窦性心律不齐：窦性心律快慢显著不等，在同一导联上P-P间期相差>0.12s。常与呼吸周期有关，吸气时心率稍快，呼气时心率稍慢。 
 
-![SinusArrhythmia](imgs\SinusArrhythmia.png)
+![SinusArrhythmia](./imgs/SinusArrhythmia.png)
 
 ##### 窦性停搏
 
 特征：在规律的窦性P-P中，突然有一长间歇无P波(常>2s),长的P-P与短的P-P不成倍数关系间歇过长时可能出现交界性逸搏，室性逸搏
 
- ![SinusArrest](imgs\SinusArrest.png)
+ ![SinusArrest](./imgs/SinusArrest.png)
 
 #### 传导阻滞
 
@@ -339,7 +339,7 @@ PR间期持续>0.21s
 
 PR间期虽未超过正常范围，但心率变或较快时，PR间期较原先延长0.04s
 
- ![IAVB](imgs\IAVB.png)
+ ![IAVB](./imgs/IAVB.png)
 
 特征：P-R间期超过正常最高值(正常P-R间期的长短与心率年龄有关)，一般>0.20s
 
@@ -362,7 +362,7 @@ PR间期虽未超过正常范围，但心率变或较快时，PR间期较原先�
 * QRS波群时间、形态一般正常(除非合并室内传导异常)
 * 房室传导比例一般>2:1 比如 3:2, 4:3等
 
- ![II-IAVB](imgs\II-IAVB.png)
+ ![II-IAVB](./imgs/II-IAVB.png)
 
 特征：P-R间期逐渐延长，直至脱落一个QRS波群后，P-R间期缩短，继之又延长，周而复始
 
@@ -376,13 +376,13 @@ PR间期虽未超过正常范围，但心率变或较快时，PR间期较原先�
 * 房室传导比例一般为2:1,3:1等
 * 连续出现2次以上的脱落称为高度房室传导阻滞 
 
- ![II-IIAVB](imgs\II-IIAVB.png)
+ ![II-IIAVB](./imgs/II-IIAVB.png)
 
 特征：P-R间期固定，P波呈比例脱落，下传的QRS波群正常
 
 二度I型和II型的比较
 
- ![II-IandII-II](imgs\II-IandII-II.png)
+ ![II-IandII-II](./imgs/II-IandII-II.png)
 
 ##### 三度房室传导阻滞(交界性心律)
 
@@ -396,7 +396,7 @@ PR间期虽未超过正常范围，但心率变或较快时，PR间期较原先�
 
 4.QRS波群正常(提示心室起搏点在房室交界区)
 
- ![IIIAVB](imgs\IIIAVB.png)
+ ![IIIAVB](./imgs/IIIAVB.png)
 
 典型表现：
 
@@ -434,9 +434,9 @@ PR间期虽未超过正常范围，但心率变或较快时，PR间期较原先�
      * 有以上QRS波群的特点
      * QRS波群时间成人在0.08-0.12s
 
- ![RBBB](imgs\RBBB.png)
+ ![RBBB](./imgs/RBBB.png)
 
- ![CRBBB](imgs\CRBBB.png)
+ ![CRBBB](./imgs/CRBBB.png)
 
 ##### 左束支传导阻滞
 
@@ -457,11 +457,11 @@ PR间期虽未超过正常范围，但心率变或较快时，PR间期较原先�
 
 具有以上QRS波群的特点，但QRS波群时间成人在0.08-0.12s，小儿在0.08-0.10s
 
- ![LBBB](imgs\LBBB.png)
+ ![LBBB](./imgs/LBBB.png)
 
 左束支传导阻滞+一度窦房传导阻滞
 
- ![LBBB+IAVB](imgs\LBBB+IAVB.png)
+ ![LBBB+IAVB](./imgs/LBBB+IAVB.png)
 
 左前分支阻滞
 
@@ -471,11 +471,11 @@ PR间期虽未超过正常范围，但心率变或较快时，PR间期较原先�
 4. QRS时间一般不明显增宽
 5. ST-T一般正常
 
-![LAFB](imgs\LAFB.png)
+![LAFB](./imgs/LAFB.png)
 
 左前分支阻滞+一度窦房传导阻滞
 
-![LAFB+IAVB](imgs\LAFB+IAVB.png)
+![LAFB+IAVB](./imgs/LAFB+IAVB.png)
 
 左后分支阻滞
 
@@ -505,29 +505,29 @@ PR间期虽未超过正常范围，但心率变或较快时，PR间期较原先�
 2. 逸搏及逸搏心律为代偿性，本身无病理意义
 3. 临床上诊断与处治关键在于导致逸搏及逸搏心律出现的缓慢性心律失常
 
-![JER](imgs\JER.png)
+![JER](./imgs/JER.png)
 
 图示：箭头指房性早搏未下传 E指交界区逸搏(Escape)
 
- ![VE](imgs\VE.png)
+ ![VE](./imgs/VE.png)
 
 图示：箭头指宽大畸形的室性逸搏
 
- ![VE+IIIAVB](imgs\VE+IIIAVB.png)
+ ![VE+IIIAVB](./imgs/VE+IIIAVB.png)
 
 典型表现：
 
 1. P波与QRS波群无关，P波频率(60bpm) > QRS频率，PP间隔与RR间隔各自规则
 2. QRS波群宽大畸形，倒置T波，为室性逸搏心律
 
- ![JER+IIIAVB](imgs\JER+IIIAVB.png)
+ ![JER+IIIAVB](./imgs/JER+IIIAVB.png)
 
 典型表现：
 
 1. P波与QRS波群无关，P波频率(60bpm)>QRS频率，PP间隔与RR间隔各自规则
 2. QRS波群时间，形态正常，为交界区逸搏心律 
 
-![diagonose](imgs\diagonose.png)
+![diagonose](./imgs/diagonose.png)
 
 #### 快速性心律失常
 
@@ -537,7 +537,7 @@ PR间期虽未超过正常范围，但心率变或较快时，PR间期较原先�
 
 心率在100次/分以上，一般不超过160次/分。
 
-  ![ST](imgs\ST.png)
+  ![ST](./imgs/ST.png)
 
 特征：
 
@@ -553,7 +553,7 @@ QRS波群形态和时间基本正常。
 
 多为不完全性代偿间歇，即期前收缩前后两个窦性P波之间的间距小于正常P-P间距的2倍。
 
-![PAC](imgs\PAC.png)
+![PAC](./imgs/PAC.png)
 
 ##### 房性前期收缩(atrial premature beats)
 
@@ -567,7 +567,7 @@ QRS波群形态和时间基本正常。
 
 ##### 房性早搏-二联律
 
- ![PAB-BCR](imgs\PAB-BCR.png)
+ ![PAB-BCR](./imgs/PAB-BCR.png)
 
 ##### 房室交界性期前收缩 
 
@@ -577,7 +577,7 @@ QRS波群前可无P'波，如有P'波常为*逆行性*(P在II、III、aVF导联�
 
 常有完全性的代偿间歇，即期前收缩前后两个窦性P波之间的间距等于正常P-P间距的2倍。
 
-![JPC](imgs\JPC.png)
+![JPC](./imgs/JPC.png)
 
 特征：
 
@@ -595,7 +595,7 @@ T波与QRS波群主波方向相反。
 
 有完全性的代偿间歇。
 
- ![VPC](imgs\VPC.png)
+ ![VPC](./imgs/VPC.png)
 
 特征：
 
@@ -605,9 +605,9 @@ T波与QRS波群主波方向相反。
 
 室性早搏-二联律
 
- ![VPB-BCR](imgs\VPB-BCR.png)
+ ![VPB-BCR](./imgs/VPB-BCR.png)
 
- ![VPB-BCR2](imgs\VPB-BCR2.png)
+ ![VPB-BCR2](./imgs/VPB-BCR2.png)
 
  ![diagonose2](imgs\diagonose2.png)
 
@@ -631,7 +631,7 @@ QRS波群：时限、形态正常；绝对整齐
 
 QRS波群形态一般正常。
 
- ![PST](imgs\PST.png)
+ ![PST](./imgs/PST.png)
 
 特征：
 
@@ -641,7 +641,7 @@ QRS波群形态一般正常。
 
 室上性心动过速
 
- ![PST2](imgs\PST2.png)
+ ![PST2](./imgs/PST2.png)
 
 室性心动过速(ventricular tachycardia)
 
@@ -659,11 +659,11 @@ QRS波群宽大畸形，时间通常>0.12s。
 
 如发现P波，且P波频率慢于QRS频率，PR无固定关系(房室分离)，则可明确诊断。
 
-![VT](imgs\VT.png)
+![VT](./imgs/VT.png)
 
 阵发性心动过速
 
- ![VT2](imgs\VT2.png)
+ ![VT2](./imgs/VT2.png)
 
 尖端扭转型室性心动过速
 
@@ -685,7 +685,7 @@ QRS波群宽大畸形，时间通常>0.12s。
 
 药物所致，如奎尼丁等
 
- ![TDP](imgs\TDP.png)
+ ![TDP](./imgs/TDP.png)
 
 扑动与颤动
 
@@ -696,14 +696,14 @@ QRS波群宽大畸形，时间通常>0.12s。
 
 ##### 心房扑动(atrial flutter)
 
- ![AF](imgs\AF.png)
+ ![AF](./imgs/AF.png)
 
 特征：
 
 1. P波消失，代之以大小、间隔相等的F波(或称锯齿波)，频率为250~400次/分
 2. 房室比例为2:1~4:1，心室律不整齐
 
- ![AF2](imgs\AF2.png)
+ ![AF2](./imgs/AF2.png)
 
 ##### 心房颤动
 
@@ -715,7 +715,7 @@ R-R间期绝对不规则。
 
 QRS波形态和时间大多正常。
 
- ![AF'](imgs\AF'.png)
+ ![AF'](./imgs/AF'.png)
 
 心房纤颤(atrial fibrillation)
 
@@ -727,7 +727,7 @@ QRS波形态和时间大多正常。
 
 3.部分短R-R' QRS有变形，无类代偿期
 
- ![AF'1](imgs\AF'1.png)
+ ![AF'1](./imgs/AF'1.png)
 
 特征：
 
@@ -737,11 +737,11 @@ QRS波形态和时间大多正常。
 
 心房颤动
 
- ![AF3](imgs\AF3.png)
+ ![AF3](./imgs/AF3.png)
 
 心室扑动
 
- ![AF4](imgs\AF4.png)
+ ![AF4](./imgs/AF4.png)
 
 心室颤动
 
@@ -749,9 +749,9 @@ QRS-T波群完全消失。
 
 出现形状不一、大小不等、节律不整的基线摆动波形，频率约为200~500次/分。
 
- ![AF5](imgs\AF5.png)
+ ![AF5](./imgs/AF5.png)
 
- ![AF6](imgs\AF6.png)
+ ![AF6](./imgs/AF6.png)
 
 预激综合征
 
@@ -769,6 +769,6 @@ L-G-L综合征;
 
 Mahaim综合征。
 
- ![PES1](imgs\PES1.png)
+ ![PES1](./imgs/PES1.png)
 
- ![PES2](imgs\PES2.png)
+ ![PES2](./imgs/PES2.png)
